@@ -9,20 +9,19 @@
   body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.7; }
   a { color: inherit; text-decoration: none; }
   .wrap { max-width: 780px; margin: 0 auto; padding: 0 1.5rem; }
-  nav { position: absolute; top: 0; left: 0; right: 0; z-index: 10; padding: 1.25rem 0; }
-  nav .inner { display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
+  nav { position: absolute; top: 0; left: 0; right: 0; z-index: 10; padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; }
   nav .logo { font-size: 18px; font-weight: 500; color: #fff; letter-spacing: -0.02em; }
   nav .logo span { color: rgba(255,255,255,0.5); font-weight: 400; }
   nav .contact-nav { font-size: 13px; color: rgba(255,255,255,0.7); border: 0.5px solid rgba(255,255,255,0.25); border-radius: 6px; padding: 6px 14px; }
   nav .contact-nav:hover { border-color: rgba(255,255,255,0.5); color: #fff; }
-  .hero-banner { position: relative; width: 100%; background-color: #000; background-image: url('BG2.png'); background-size: contain; background-repeat: no-repeat; background-position: center top; height: 0; padding-bottom: 44.6%; }
-  .hero-banner::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.4) 60%, rgba(10,10,10,1) 100%); }
-  .hero-text { position: absolute; bottom: 0; left: 0; right: 0; z-index: 2; padding: 0 0 4rem; }
+  .hero-banner { position: relative; width: 100%; height: 480px; background-color: #000; background-image: url('BG2.png'); background-size: cover; background-position: center center; }
+  .hero-banner::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.5) 65%, rgba(10,10,10,1) 100%); }
+  .hero-text { position: absolute; bottom: 0; left: 0; right: 0; z-index: 2; padding-bottom: 3rem; }
   .hero-text-inner { max-width: 780px; margin: 0 auto; padding: 0 1.5rem; }
-  .hero-eyebrow { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 1rem; }
-  .hero-text h1 { font-size: 42px; font-weight: 500; line-height: 1.1; letter-spacing: -0.02em; color: #fff; margin-bottom: 1rem; }
+  .hero-eyebrow { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 0.75rem; }
+  .hero-text h1 { font-size: 38px; font-weight: 500; line-height: 1.1; letter-spacing: -0.02em; color: #fff; margin-bottom: 1rem; }
   .hero-text h1 em { font-style: normal; color: rgba(255,255,255,0.45); }
-  .hero-text p { font-size: 16px; color: rgba(255,255,255,0.65); max-width: 560px; margin-bottom: 0.75rem; }
+  .hero-text p { font-size: 15px; color: rgba(255,255,255,0.65); max-width: 560px; margin-bottom: 0.5rem; }
   .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: #1a1a1a; border: 0.5px solid #1a1a1a; margin: 3rem 0; }
   .stat { background: #0a0a0a; padding: 1.5rem 1.25rem; }
   .stat-num { font-size: 20px; font-weight: 500; color: #fff; margin-bottom: 4px; }
@@ -53,20 +52,23 @@
   footer { border-top: 0.5px solid #1a1a1a; padding: 1.5rem 0; }
   footer .inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
   footer p { font-size: 12px; color: #333; }
-  @media (max-width: 560px) {
+  @media (max-width: 600px) {
+    .hero-banner { height: 320px; }
     .hero-text h1 { font-size: 24px; }
+    .hero-text p { font-size: 13px; }
+    nav { padding: 1rem 1.25rem; }
+    nav .logo { font-size: 16px; }
     .stats { grid-template-columns: 1fr; }
     .pillars { grid-template-columns: 1fr; }
+    .hero-text-inner { padding: 0 1.25rem; }
   }
 </style>
 </head>
 <body>
 <div class="hero-banner">
   <nav>
-    <div class="inner">
-      <div class="logo">Dark<span>Half</span></div>
-      <a href="mailto:info@darkhalf.com" class="contact-nav">Get in touch</a>
-    </div>
+    <div class="logo">Dark<span>Half</span></div>
+    <a href="mailto:info@darkhalf.com" class="contact-nav">Get in touch</a>
   </nav>
   <div class="hero-text">
     <div class="hero-text-inner">
