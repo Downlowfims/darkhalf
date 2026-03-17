@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DarkHalf — AI VFX</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.7; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 780px; margin: 0 auto; padding: 0 1.5rem; }
+  nav { border-bottom: 0.5px solid #222; padding: 1.25rem 0; }
+  nav .inner { display: flex; justify-content: space-between; align-items: center; }
+  nav .logo { font-size: 18px; font-weight: 500; color: #fff; letter-spacing: -0.02em; }
+  nav .logo span { color: #888; font-weight: 400; }
+  nav .contact-nav { font-size: 13px; color: #888; border: 0.5px solid #333; border-radius: 6px; padding: 6px 14px; }
+  nav .contact-nav:hover { border-color: #666; color: #ccc; }
+  .hero { padding: 5rem 0 4rem; border-bottom: 0.5px solid #1a1a1a; }
+  .hero-eyebrow { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #555; margin-bottom: 1.25rem; }
+  .hero h1 { font-size: 42px; font-weight: 500; line-height: 1.15; letter-spacing: -0.02em; color: #fff; margin-bottom: 1.5rem; }
+  .hero h1 em { font-style: normal; color: #555; }
+  .hero p { font-size: 17px; color: #888; max-width: 580px; margin-bottom: 1rem; }
+  .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: #1a1a1a; border: 0.5px solid #1a1a1a; margin: 3rem 0; }
+  .stat { background: #0a0a0a; padding: 1.5rem 1.25rem; }
+  .stat-num { font-size: 20px; font-weight: 500; color: #fff; margin-bottom: 4px; }
+  .stat-label { font-size: 12px; color: #666; margin-bottom: 3px; }
+  .stat-sub { font-size: 11px; color: #444; }
+  section { padding: 3rem 0; border-bottom: 0.5px solid #1a1a1a; }
+  .section-label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #444; margin-bottom: 1.25rem; }
+  section h2 { font-size: 26px; font-weight: 500; color: #fff; letter-spacing: -0.02em; margin-bottom: 1rem; }
+  section p { font-size: 15px; color: #777; margin-bottom: 1rem; max-width: 620px; }
+  .pipeline-box { background: #111; border: 0.5px solid #1e1e1e; border-radius: 10px; padding: 1.25rem; margin-top: 1.5rem; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 0.75rem; }
+  .tag { font-size: 12px; color: #666; background: #0a0a0a; border: 0.5px solid #222; border-radius: 6px; padding: 5px 12px; }
+  .pillars { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: #1a1a1a; border: 0.5px solid #1a1a1a; margin-top: 2rem; }
+  .pillar { background: #0a0a0a; padding: 1.5rem; }
+  .pillar h3 { font-size: 14px; font-weight: 500; color: #ccc; margin-bottom: 8px; }
+  .pillar p { font-size: 13px; color: #555; margin: 0; max-width: 100%; }
+  .credit-group { margin-bottom: 1.5rem; }
+  .credit-group-label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #333; margin-bottom: 0.5rem; }
+  .credits-row { display: flex; flex-wrap: wrap; gap: 8px; }
+  .credit { font-size: 13px; color: #555; background: #111; border: 0.5px solid #1e1e1e; border-radius: 6px; padding: 5px 12px; }
+  .cta { padding: 3rem 0 5rem; }
+  .cta h2 { font-size: 26px; font-weight: 500; color: #fff; letter-spacing: -0.02em; margin-bottom: 0.75rem; }
+  .cta p { font-size: 15px; color: #666; margin-bottom: 1.5rem; max-width: 480px; }
+  .cta-email { font-size: 15px; color: #888; border: 0.5px solid #2a2a2a; border-radius: 8px; padding: 0.75rem 1.25rem; display: inline-block; }
+  .cta-email:hover { border-color: #555; color: #ccc; }
+  footer { border-top: 0.5px solid #1a1a1a; padding: 1.5rem 0; }
+  footer .inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  footer p { font-size: 12px; color: #333; }
+  @media (max-width: 560px) {
+    .hero h1 { font-size: 28px; }
+    .stats { grid-template-columns: 1fr; }
+    .pillars { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap inner">
+    <div class="logo">Dark<span>Half</span></div>
+    <a href="mailto:info@darkhalf.com" class="contact-nav">Get in touch</a>
+  </div>
+</nav>
+<main class="wrap">
+  <div class="hero">
+    <p class="hero-eyebrow">DarkHalf — an AI VFX unit of Cream Productions</p>
+    <h1>The tools are the same.<br><em>The experience isn't.</em></h1>
+    <p>Every AI VFX house has access to the same frontier models. What you can't download is the judgment to use them — or the broadcast infrastructure to deliver on time, on spec, and with full legal indemnification.</p>
+    <p>DarkHalf is North America's most produced AI VFX studio. More completed broadcast productions using generative AI than any studio on the continent.</p>
+    <div class="stats">
+      <div class="stat">
+        <p class="stat-num">10+</p>
+        <p class="stat-label">Completed productions</p>
+        <p class="stat-sub">Series, features &amp; shorts</p>
+      </div>
+      <div class="stat">
+        <p class="stat-num">Network approved</p>
+        <p class="stat-label">Major networks &amp; streamers</p>
+        <p class="stat-sub">A&amp;E, History, Amazon, MGM</p>
+      </div>
+      <div class="stat">
+        <p class="stat-num">Full</p>
+        <p class="stat-label">Legal indemnification</p>
+        <p class="stat-sub">On all AI-generated content</p>
+      </div>
+    </div>
+  </div>
+  <section>
+    <p class="section-label">Approach</p>
+    <h2>AI is only as good as how you direct it.</h2>
+    <p>Prompting AI is a craft. Our team brings 30+ years of broadcast production experience — we brief AI the way a seasoned director briefs a crew. The output reflects the quality of the direction, and that's not something you can license.</p>
+    <p>We operate across enterprise AI platforms and bespoke ComfyUI pipelines for custom work, merging generative AI with traditional VFX tools — professional rendering, compositing, and finishing workflows that integrate directly into your existing post-production infrastructure.</p>
+    <div class="pipeline-box">
+      <p class="section-label" style="margin-bottom:0">Pipeline &amp; tools</p>
+      <div class="tags">
+        <span class="tag">Enterprise AI platforms</span>
+        <span class="tag">Custom ComfyUI pipelines</span>
+        <span class="tag">Professional compositing</span>
+        <span class="tag">Rendering &amp; finishing</span>
+        <span class="tag">Proprietary AR &amp; previs tools</span>
+      </div>
+    </div>
+  </section>
+  <section>
+    <p class="section-label">Why DarkHalf</p>
+    <h2>Built for broadcast. Ready for anything.</h2>
+    <div class="pillars">
+      <div class="pillar">
+        <h3>Volume and track record</h3>
+        <p>More completed broadcast AI VFX productions than any studio in North America — from documentary series to tier-A streaming and feature film.</p>
+      </div>
+      <div class="pillar">
+        <h3>Production infrastructure</h3>
+        <p>You plug into a full broadcast operation. Smooth delivery cycles, professional revision management, and specs your post team already speaks.</p>
+      </div>
+      <div class="pillar">
+        <h3>Legal clarity</h3>
+        <p>In-house legal vetting and full indemnification on all AI-generated content. We take the copyright liability question off your plate entirely.</p>
+      </div>
+      <div class="pillar">
+        <h3>Client education</h3>
+        <p>We help you scope projects realistically, set expectations correctly, and protect your budget from the start. The technology moves fast — we keep you ahead of it.</p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <p class="section-label">Selected credits</p>
+    <h2>Productions</h2>
+    <div class="credit-group">
+      <p class="credit-group-label">Broadcast series</p>
+      <div class="credits-row">
+        <span class="credit">Life After People — History Channel</span>
+        <span class="credit">Cold Case Files</span>
+        <span class="credit">Unbelievable Stories — Dan Aykroyd</span>
+        <span class="credit">Deepwater Mysteries</span>
+        <span class="credit">History's Greatest Mysteries</span>
+      </div>
+    </div>
+    <div class="credit-group">
+      <p class="credit-group-label">Feature &amp; short film</p>
+      <div class="credits-row">
+        <span class="credit">Feature — Eli Roth</span>
+        <span class="credit">Short films (2) — Eli Roth</span>
+        <span class="credit">Feature — The Pond</span>
+      </div>
+    </div>
+    <div class="credit-group">
+      <p class="credit-group-label">Streaming</p>
+      <div class="credits-row">
+        <span class="credit">Westies — Amazon / MGM</span>
+      </div>
+    </div>
+  </section>
+  <div class="cta">
+    <p class="section-label">Contact</p>
+    <h2>Start a conversation.</h2>
+    <p>Tell us what you're building. We'll tell you what's possible, what it costs, and whether AI VFX is the right tool for the job.</p>
+    <a href="mailto:info@darkhalf.com" class="cta-email">info@darkhalf.com</a>
+  </div>
+</main>
+<footer>
+  <div class="wrap inner">
+    <p>&copy; 2026 DarkHalf. A unit of Cream Productions, Toronto.</p>
+    <p>Built on frontier AI. Delivered on broadcast spec.</p>
+  </div>
+</footer>
+</body>
+</html>
