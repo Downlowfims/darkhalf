@@ -9,58 +9,54 @@
   body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.7; }
   a { color: inherit; text-decoration: none; }
   .wrap { max-width: 780px; margin: 0 auto; padding: 0 1.5rem; }
-  nav { position: absolute; top: 0; left: 0; right: 0; z-index: 10; padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+  nav { width: 100%; padding: 1.25rem 1.5rem; display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 10; background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%); }
   nav .logo { font-size: 18px; font-weight: 500; color: #fff; letter-spacing: -0.02em; }
   nav .logo span { color: rgba(255,255,255,0.5); font-weight: 400; }
-  nav .contact-nav { font-size: 13px; color: rgba(255,255,255,0.7); border: 0.5px solid rgba(255,255,255,0.25); border-radius: 6px; padding: 6px 14px; }
-  nav .contact-nav:hover { border-color: rgba(255,255,255,0.5); color: #fff; }
-  .hero-banner { position: relative; width: 100%; height: 480px; background-color: #000; background-image: url('BG2.png'); background-size: cover; background-position: center center; }
-  .hero-banner::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.5) 65%, rgba(10,10,10,1) 100%); }
-  .hero-text { position: absolute; bottom: 0; left: 0; right: 0; z-index: 2; padding-bottom: 3rem; }
-  .hero-text-inner { max-width: 780px; margin: 0 auto; padding: 0 1.5rem; }
+  nav .contact-nav { font-size: 13px; color: rgba(255,255,255,0.7); border: 0.5px solid rgba(255,255,255,0.25); border-radius: 6px; padding: 6px 14px; white-space: nowrap; }
+  .hero-banner { position: relative; width: 100%; background-color: #000; background-image: url('BG2.png'); background-size: cover; background-position: center center; display: flex; flex-direction: column; }
+  .hero-banner::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 40%, rgba(10,10,10,0.95) 100%); pointer-events: none; }
+  .hero-text { position: relative; z-index: 2; padding: 2rem 1.5rem 3rem; max-width: 780px; margin: 0 auto; width: 100%; }
   .hero-eyebrow { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 0.75rem; }
-  .hero-text h1 { font-size: 38px; font-weight: 500; line-height: 1.1; letter-spacing: -0.02em; color: #fff; margin-bottom: 1rem; }
+  .hero-text h1 { font-size: 36px; font-weight: 500; line-height: 1.1; letter-spacing: -0.02em; color: #fff; margin-bottom: 1rem; }
   .hero-text h1 em { font-style: normal; color: rgba(255,255,255,0.45); }
-  .hero-text p { font-size: 15px; color: rgba(255,255,255,0.65); max-width: 560px; margin-bottom: 0.5rem; }
-  .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: #1a1a1a; border: 0.5px solid #1a1a1a; margin: 3rem 0; }
-  .stat { background: #0a0a0a; padding: 1.5rem 1.25rem; }
-  .stat-num { font-size: 20px; font-weight: 500; color: #fff; margin-bottom: 4px; }
-  .stat-label { font-size: 12px; color: #666; margin-bottom: 3px; }
-  .stat-sub { font-size: 11px; color: #444; }
-  section { padding: 3rem 0; border-bottom: 0.5px solid #1a1a1a; }
-  .section-label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #444; margin-bottom: 1.25rem; }
-  section h2 { font-size: 26px; font-weight: 500; color: #fff; letter-spacing: -0.02em; margin-bottom: 1rem; }
-  section p { font-size: 15px; color: #777; margin-bottom: 1rem; max-width: 620px; }
+  .hero-text p { font-size: 15px; color: rgba(255,255,255,0.65); margin-bottom: 0.75rem; }
+  .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: #1a1a1a; border: 0.5px solid #1a1a1a; margin: 2rem 0; }
+  .stat { background: #0a0a0a; padding: 1.25rem 1rem; }
+  .stat-num { font-size: 18px; font-weight: 500; color: #fff; margin-bottom: 4px; }
+  .stat-label { font-size: 11px; color: #666; margin-bottom: 3px; }
+  .stat-sub { font-size: 10px; color: #444; }
+  section { padding: 2.5rem 0; border-bottom: 0.5px solid #1a1a1a; }
+  .section-label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #444; margin-bottom: 1rem; }
+  section h2 { font-size: 24px; font-weight: 500; color: #fff; letter-spacing: -0.02em; margin-bottom: 1rem; }
+  section p { font-size: 15px; color: #777; margin-bottom: 1rem; }
   .pipeline-box { background: #111; border: 0.5px solid #1e1e1e; border-radius: 10px; padding: 1.25rem; margin-top: 1.5rem; }
   .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 0.75rem; }
   .tag { font-size: 12px; color: #666; background: #0a0a0a; border: 0.5px solid #222; border-radius: 6px; padding: 5px 12px; }
-  .pillars { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: #1a1a1a; border: 0.5px solid #1a1a1a; margin-top: 2rem; }
-  .pillar { background: #0a0a0a; padding: 1.5rem; }
-  .pillar h3 { font-size: 14px; font-weight: 500; color: #ccc; margin-bottom: 8px; }
-  .pillar p { font-size: 13px; color: #555; margin: 0; max-width: 100%; }
+  .pillars { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: #1a1a1a; border: 0.5px solid #1a1a1a; margin-top: 1.5rem; }
+  .pillar { background: #0a0a0a; padding: 1.25rem; }
+  .pillar h3 { font-size: 14px; font-weight: 500; color: #ccc; margin-bottom: 6px; }
+  .pillar p { font-size: 13px; color: #555; margin: 0; }
   .credit-group { margin-bottom: 1.5rem; }
   .credit-group-label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #333; margin-bottom: 0.5rem; }
   .credits-row { display: flex; flex-wrap: wrap; gap: 8px; }
   .credit { font-size: 13px; color: #555; background: #111; border: 0.5px solid #1e1e1e; border-radius: 6px; padding: 5px 12px; }
-  .cta { padding: 3rem 0 5rem; }
-  .cta h2 { font-size: 26px; font-weight: 500; color: #fff; letter-spacing: -0.02em; margin-bottom: 0.75rem; }
-  .cta p { font-size: 15px; color: #666; margin-bottom: 1.5rem; max-width: 480px; }
+  .cta { padding: 2.5rem 0 4rem; }
+  .cta h2 { font-size: 24px; font-weight: 500; color: #fff; letter-spacing: -0.02em; margin-bottom: 0.75rem; }
+  .cta p { font-size: 15px; color: #666; margin-bottom: 1.5rem; }
   .cta-email { font-size: 15px; color: #888; border: 0.5px solid #2a2a2a; border-radius: 8px; padding: 0.75rem 1.25rem; display: inline-block; }
-  .cta-email:hover { border-color: #555; color: #ccc; }
-  .logo-section { padding: 4rem 0; display: flex; justify-content: center; background: #0a0a0a; }
+  .logo-section { padding: 3rem 1.5rem; display: flex; justify-content: center; background: #0a0a0a; }
   .logo-section img { width: 100%; max-width: 780px; display: block; }
-  footer { border-top: 0.5px solid #1a1a1a; padding: 1.5rem 0; }
-  footer .inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  footer { border-top: 0.5px solid #1a1a1a; padding: 1.5rem; }
+  footer .inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; max-width: 780px; margin: 0 auto; }
   footer p { font-size: 12px; color: #333; }
   @media (max-width: 600px) {
-    .hero-banner { height: 320px; }
-    .hero-text h1 { font-size: 24px; }
-    .hero-text p { font-size: 13px; }
-    nav { padding: 1rem 1.25rem; }
-    nav .logo { font-size: 16px; }
+    .hero-text h1 { font-size: 26px; }
+    .hero-text p { font-size: 14px; }
     .stats { grid-template-columns: 1fr; }
+    .stat-num { font-size: 20px; }
     .pillars { grid-template-columns: 1fr; }
-    .hero-text-inner { padding: 0 1.25rem; }
+    nav .logo { font-size: 16px; }
+    footer .inner { flex-direction: column; align-items: flex-start; }
   }
 </style>
 </head>
@@ -71,12 +67,10 @@
     <a href="mailto:info@darkhalf.com" class="contact-nav">Get in touch</a>
   </nav>
   <div class="hero-text">
-    <div class="hero-text-inner">
-      <p class="hero-eyebrow">DarkHalf — an AI VFX unit of Cream Productions</p>
-      <h1>The tools are the same.<br><em>The experience isn't.</em></h1>
-      <p>Every AI VFX house has access to the same frontier models. What you can't download is the judgment to use them — or the broadcast infrastructure to deliver on time, on spec, and with full legal indemnification.</p>
-      <p>DarkHalf is North America's most produced AI VFX studio. More completed broadcast productions using generative AI than any studio on the continent.</p>
-    </div>
+    <p class="hero-eyebrow">DarkHalf — an AI VFX unit of Cream Productions</p>
+    <h1>The tools are the same.<br><em>The experience isn't.</em></h1>
+    <p>Every AI VFX house has access to the same frontier models. What you can't download is the judgment to use them — or the broadcast infrastructure to deliver on time, on spec, and with full legal indemnification.</p>
+    <p>DarkHalf is North America's most produced AI VFX studio. More completed broadcast productions using generative AI than any studio on the continent.</p>
   </div>
 </div>
 <main class="wrap">
@@ -174,7 +168,7 @@
   <img src="image.png" alt="DarkHalf" />
 </div>
 <footer>
-  <div class="wrap inner">
+  <div class="inner">
     <p>&copy; 2026 DarkHalf. A unit of Cream Productions, Toronto.</p>
     <p>Built on frontier AI. Delivered on broadcast spec.</p>
   </div>
