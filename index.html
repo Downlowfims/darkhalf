@@ -17,7 +17,9 @@
   .nav-right a { font-size: 13px; letter-spacing: 0.05em; color: #fff; opacity: 0.7; }
   .nav-right a:hover { opacity: 1; }
   .hero { padding: 8rem 2rem 4rem; }
-  .hero-title { font-size: clamp(72px, 16vw, 220px); font-weight: 800; letter-spacing: -0.03em; line-height: 0.88; text-transform: uppercase; display: flex; justify-content: space-between; align-items: flex-end; }
+  .hero-title { font-size: clamp(72px, 16vw, 220px); font-weight: 800; letter-spacing: -0.05em; line-height: 0.88; text-transform: uppercase; display: flex; justify-content: space-between; align-items: flex-end; gap: 0.05em; }
+  .hero-title .word-dark { color: #888; }
+  .hero-title .word-half { color: #fff; }
   .hero-sub { display: flex; justify-content: space-between; margin-top: 2rem; padding-top: 1.5rem; border-top: 0.5px solid #222; }
   .hero-sub-left, .hero-sub-right { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #666; line-height: 1.6; }
   .hero-video { width: 100%; aspect-ratio: 16/9; overflow: hidden; background: #111; }
@@ -56,12 +58,13 @@
   .pipeline-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #555; margin-bottom: 2rem; }
   .tags { display: flex; flex-wrap: wrap; gap: 10px; }
   .tag { font-size: 12px; letter-spacing: 0.05em; color: #555; border: 0.5px solid #222; padding: 8px 16px; }
-  .logo-image { padding: 6rem 2rem; display: flex; justify-content: center; border-top: 0.5px solid #111; }
-  .logo-image img { width: 100%; max-width: 900px; }
+  .end-video { width: 100%; overflow: hidden; background: #000; border-top: 0.5px solid #111; }
+  .end-video video { width: 100%; display: block; object-fit: cover; }
   footer { padding: 4rem 2rem 3rem; border-top: 0.5px solid #222; }
   .footer-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 3rem; flex-wrap: wrap; gap: 2rem; }
-  .footer-studio { font-size: clamp(48px, 10vw, 120px); font-weight: 800; letter-spacing: -0.04em; text-transform: uppercase; line-height: 0.9; }
-  .footer-studio span { color: #222; }
+  .footer-studio { font-size: clamp(48px, 10vw, 120px); font-weight: 800; letter-spacing: -0.05em; text-transform: uppercase; line-height: 0.9; }
+  .footer-studio .word-dark { color: #888; }
+  .footer-studio .word-half { color: #fff; }
   .footer-cta a { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; border: 0.5px solid #333; padding: 12px 24px; display: inline-block; transition: border-color 0.2s; }
   .footer-cta a:hover { border-color: #fff; }
   .footer-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 0.5px solid #1a1a1a; flex-wrap: wrap; gap: 1rem; }
@@ -77,7 +80,7 @@
     .credits-grid { grid-template-columns: 1fr; }
     .approach-grid { grid-template-columns: 1fr; gap: 2rem; }
     .pillars { grid-template-columns: 1fr; }
-    .approach, .pipeline, .logo-image, footer, .section-header { padding-left: 1.25rem; padding-right: 1.25rem; }
+    .approach, .pipeline, footer, .section-header { padding-left: 1.25rem; padding-right: 1.25rem; }
     .footer-studio { font-size: 48px; }
     .footer-top { flex-direction: column; }
     .stat-item .num { font-size: 36px; }
@@ -98,8 +101,8 @@
 
 <div class="hero">
   <div class="hero-title">
-    <span>Dark</span>
-    <span>Half</span>
+    <span class="word-dark">Dark</span>
+    <span class="word-half">Half</span>
   </div>
   <div class="hero-sub">
     <div class="hero-sub-left">AI VFX Studio<br>Based in Toronto</div>
@@ -137,72 +140,103 @@
 </div>
 
 <div class="section-header" id="credits">
-  <h2>Selected credits</h2>
+  <h2>Selected work</h2>
 </div>
 
 <div class="credits-grid">
+
   <div class="credit-item has-video">
     <video autoplay muted loop playsinline>
       <source src="FISHWEB.mov" type="video/mp4">
       <source src="FISHWEB.mov" type="video/quicktime">
     </video>
     <div class="credit-overlay">
-      <div class="credit-title">Life After People</div>
-      <div class="credit-type">History Channel — TV Series</div>
-    </div>
-  </div>
-  <div class="credit-item has-video">
-    <video autoplay muted loop playsinline>
-      <source src="COMFY.mov" type="video/mp4">
-      <source src="COMFY.mov" type="video/quicktime">
-    </video>
-    <div class="credit-overlay">
-      <div class="credit-title">Westies</div>
-      <div class="credit-type">Amazon / MGM — Streaming</div>
-    </div>
-  </div>
-  <div class="credit-item has-video">
-    <video autoplay muted loop playsinline>
-      <source src="SD480p.mov" type="video/mp4">
-      <source src="SD480p.mov" type="video/quicktime">
-    </video>
-    <div class="credit-overlay">
       <div class="credit-title">Eli Roth</div>
-      <div class="credit-type">Feature Film + 2 Short Films</div>
+      <div class="credit-type">Feature Film + 2 Short Films — AI VFX</div>
     </div>
   </div>
+
   <div class="credit-item has-video">
     <video autoplay muted loop playsinline>
       <source src="JAR4WEB.mov" type="video/mp4">
       <source src="JAR4WEB.mov" type="video/quicktime">
     </video>
     <div class="credit-overlay">
-      <div class="credit-title">Cold Case Files</div>
-      <div class="credit-type">Broadcast Series</div>
+      <div class="credit-title">Feature Film VFX</div>
+      <div class="credit-type">AI-assisted VFX for narrative cinema</div>
     </div>
   </div>
+
+  <div class="credit-item has-video">
+    <video autoplay muted loop playsinline>
+      <source src="KLINGBOAT.mov" type="video/mp4">
+      <source src="KLINGBOAT.mov" type="video/quicktime">
+    </video>
+    <div class="credit-overlay">
+      <div class="credit-title">Cold Case Files</div>
+      <div class="credit-type">A&amp;E — Dramatic Reconstruction</div>
+    </div>
+  </div>
+
+  <div class="credit-item has-video">
+    <video autoplay muted loop playsinline>
+      <source src="PIRATE.mov" type="video/mp4">
+      <source src="PIRATE.mov" type="video/quicktime">
+    </video>
+    <div class="credit-overlay">
+      <div class="credit-title">Unbelievable Stories</div>
+      <div class="credit-type">Dan Aykroyd — History / A&amp;E</div>
+    </div>
+  </div>
+
+  <div class="credit-item has-video">
+    <video autoplay muted loop playsinline>
+      <source src="COMFY.mov" type="video/mp4">
+      <source src="COMFY.mov" type="video/quicktime">
+    </video>
+    <div class="credit-overlay">
+      <div class="credit-title">Custom Motion Pipelines</div>
+      <div class="credit-type">Bespoke ComfyUI motion graphics workflows</div>
+    </div>
+  </div>
+
+  <div class="credit-item has-video">
+    <video autoplay muted loop playsinline>
+      <source src="VIZ2.mov" type="video/mp4">
+      <source src="VIZ2.mov" type="video/quicktime">
+    </video>
+    <div class="credit-overlay">
+      <div class="credit-title">ViZ — AR Previs</div>
+      <div class="credit-type">Proprietary AR previsualization for AI pipelines</div>
+    </div>
+  </div>
+
+  <div class="credit-item text-only">
+    <div class="credit-title">Life After People</div>
+    <div class="credit-type">History Channel — TV Series</div>
+  </div>
+
+  <div class="credit-item text-only">
+    <div class="credit-title">History's Greatest Mysteries</div>
+    <div class="credit-type">History Channel — TV Series</div>
+  </div>
+
   <div class="credit-item text-only">
     <div class="credit-title">Deepwater Mysteries</div>
     <div class="credit-type">TV Series</div>
   </div>
-  <div class="credit-item text-only">
-    <div class="credit-title">History's Greatest Mysteries</div>
-    <div class="credit-type">TV Series</div>
-  </div>
-  <div class="credit-item text-only">
-    <div class="credit-title">Unbelievable Stories</div>
-    <div class="credit-type">Dan Aykroyd — TV Series</div>
-  </div>
+
   <div class="credit-item text-only">
     <div class="credit-title">The Pond</div>
     <div class="credit-type">Feature Film</div>
   </div>
+
 </div>
 
 <div class="mid-video">
   <video autoplay muted loop playsinline>
-    <source src="FISHWEB.mov" type="video/mp4">
-    <source src="FISHWEB.mov" type="video/quicktime">
+    <source src="PIRATE.mov" type="video/mp4">
+    <source src="PIRATE.mov" type="video/quicktime">
   </video>
 </div>
 
@@ -229,8 +263,8 @@
       <p>Full indemnification on all AI-generated content. Copyright liability off your plate, entirely.</p>
     </div>
     <div class="pillar">
-      <h3>Client education</h3>
-      <p>We help you scope realistically, set expectations correctly, and protect your budget. The technology moves fast — we keep you ahead of it.</p>
+      <h3>Proprietary AR previs</h3>
+      <p>Our ViZ platform brings AI-native augmented reality previsualization directly into production planning — faster iteration, smarter shots, tighter pipelines.</p>
     </div>
   </div>
 </div>
@@ -242,17 +276,20 @@
     <span class="tag">Custom ComfyUI pipelines</span>
     <span class="tag">Professional compositing</span>
     <span class="tag">Rendering &amp; finishing</span>
-    <span class="tag">Proprietary AR &amp; previs tools</span>
+    <span class="tag">ViZ AR previs</span>
+    <span class="tag">Proprietary motion pipelines</span>
   </div>
 </div>
 
-<div class="logo-image">
-  <img src="image.png" alt="DarkHalf" />
+<div class="end-video">
+  <video autoplay muted loop playsinline>
+    <source src="DH.mp4" type="video/mp4">
+  </video>
 </div>
 
 <footer>
   <div class="footer-top">
-    <div class="footer-studio">Dark<span>Half</span></div>
+    <div class="footer-studio"><span class="word-dark">Dark</span><span class="word-half">Half</span></div>
     <div class="footer-cta"><a href="mailto:info@darkhalf.com">Start a conversation</a></div>
   </div>
   <div class="footer-bottom">
