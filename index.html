@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DarkHalf — AI VFX</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
@@ -60,14 +61,14 @@
   .tag { font-size: 12px; letter-spacing: 0.05em; color: #555; border: 0.5px solid #222; padding: 8px 16px; }
   .end-video { width: 100%; overflow: hidden; background: #000; border-top: 0.5px solid #111; }
   .end-video video { width: 100%; display: block; object-fit: cover; }
-  footer { padding: 4rem 2rem 3rem; border-top: 0.5px solid #222; }
-  .footer-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 3rem; flex-wrap: wrap; gap: 2rem; }
-  .footer-studio { font-size: clamp(48px, 10vw, 120px); font-weight: 800; letter-spacing: -0.05em; text-transform: uppercase; line-height: 0.9; }
-  .footer-studio .word-dark { color: #888; }
-  .footer-studio .word-half { color: #fff; }
-  .footer-cta a { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; border: 0.5px solid #333; padding: 12px 24px; display: inline-block; transition: border-color 0.2s; }
+  footer { padding: 4rem 2rem 3rem; border-top: 0.5px solid #222; text-align: center; }
+  .footer-cta { margin-bottom: 2rem; }
+  .footer-cta a { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; border: 0.5px solid #333; padding: 14px 32px; display: inline-block; transition: border-color 0.2s; }
   .footer-cta a:hover { border-color: #fff; }
-  .footer-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 0.5px solid #1a1a1a; flex-wrap: wrap; gap: 1rem; }
+  .footer-division { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #444; margin-bottom: 2rem; }
+  .footer-division .cream { font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 14px; letter-spacing: 0.05em; color: #cc2200; text-transform: none; transition: color 0.2s; }
+  .footer-division .cream:hover { color: #ff3311; }
+  .footer-bottom { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 0.5px solid #1a1a1a; flex-wrap: wrap; gap: 1rem; text-align: left; }
   .footer-bottom p { font-size: 11px; letter-spacing: 0.05em; color: #333; text-transform: uppercase; }
   @media (max-width: 700px) {
     nav { padding: 1rem 1.25rem; }
@@ -81,8 +82,7 @@
     .approach-grid { grid-template-columns: 1fr; gap: 2rem; }
     .pillars { grid-template-columns: 1fr; }
     .approach, .pipeline, footer, .section-header { padding-left: 1.25rem; padding-right: 1.25rem; }
-    .footer-studio { font-size: 48px; }
-    .footer-top { flex-direction: column; }
+    .footer-bottom { flex-direction: column; }
     .stat-item .num { font-size: 36px; }
     .credit-item.has-video { min-height: 200px; }
   }
@@ -284,12 +284,14 @@
 </div>
 
 <footer>
-  <div class="footer-top">
-    <div class="footer-studio"><span class="word-dark">Dark</span><span class="word-half">Half</span></div>
-    <div class="footer-cta"><a href="mailto:info@darkhalf.com">Start a conversation</a></div>
+  <div class="footer-cta">
+    <a href="mailto:info@darkhalf.com">Start a conversation</a>
+  </div>
+  <div class="footer-division">
+    A division of <a href="https://www.creamproductions.com" target="_blank" class="cream">Cream Productions</a>
   </div>
   <div class="footer-bottom">
-    <p>&copy; 2026 DarkHalf. A unit of Cream Productions, Toronto.</p>
+    <p>&copy; 2026 DarkHalf. Toronto, Canada.</p>
     <p>Built on frontier AI. Delivered on broadcast spec.</p>
   </div>
 </footer>
