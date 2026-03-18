@@ -17,7 +17,7 @@
   .nav-right a { font-size: 13px; letter-spacing: 0.05em; color: #fff; opacity: 0.7; }
   .nav-right a:hover { opacity: 1; }
   .hero { padding: 8rem 2rem 4rem; }
-  .hero-title { font-size: clamp(72px, 16vw, 220px); font-weight: 800; letter-spacing: -0.05em; line-height: 0.88; text-transform: uppercase; display: flex; justify-content: space-between; align-items: flex-end; gap: 0.05em; }
+  .hero-title { font-size: clamp(72px, 16vw, 220px); font-weight: 800; letter-spacing: -0.05em; line-height: 0.88; text-transform: uppercase; }
   .hero-title .word-dark { color: #888; }
   .hero-title .word-half { color: #fff; }
   .hero-sub { display: flex; justify-content: space-between; margin-top: 2rem; padding-top: 1.5rem; border-top: 0.5px solid #222; }
@@ -46,7 +46,9 @@
   .credit-item.text-only { display: flex; flex-direction: column; justify-content: flex-end; min-height: 120px; }
   .mid-video { width: 100%; overflow: hidden; background: #000; margin-top: 4rem; }
   .mid-video video { width: 100%; display: block; max-height: 70vh; object-fit: cover; opacity: 0.85; }
-  .approach { padding: 6rem 2rem; border-top: 0.5px solid #222; margin-top: 4rem; }
+  .full-video { width: 100%; overflow: hidden; background: #000; border-top: 0.5px solid #111; border-bottom: 0.5px solid #111; }
+  .full-video video { width: 100%; display: block; max-height: 80vh; object-fit: cover; }
+  .approach { padding: 6rem 2rem; border-top: 0.5px solid #222; }
   .approach-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
   .approach-heading { font-size: clamp(32px, 5vw, 56px); font-weight: 700; letter-spacing: -0.03em; text-transform: uppercase; line-height: 1; }
   .approach-body p { font-size: 15px; color: #666; margin-bottom: 1rem; line-height: 1.7; }
@@ -100,10 +102,7 @@
 </nav>
 
 <div class="hero">
-  <div class="hero-title">
-    <span class="word-dark">Dark</span>
-    <span class="word-half">Half</span>
-  </div>
+  <div class="hero-title"><span class="word-dark">Dark</span><span class="word-half">Half</span></div>
   <div class="hero-sub">
     <div class="hero-sub-left">AI VFX Studio<br>Based in Toronto</div>
     <div class="hero-sub-right">North America's most produced<br>AI VFX studio</div>
@@ -237,6 +236,12 @@
   <video autoplay muted loop playsinline>
     <source src="PIRATE.mov" type="video/mp4">
     <source src="PIRATE.mov" type="video/quicktime">
+  </video>
+</div>
+
+<div class="full-video">
+  <video autoplay muted loop playsinline>
+    <source src="GIRL.mp4" type="video/mp4">
   </video>
 </div>
 
