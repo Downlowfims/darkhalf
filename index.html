@@ -20,19 +20,13 @@
   .hero-title { font-size: clamp(72px, 16vw, 220px); font-weight: 800; letter-spacing: -0.05em; line-height: 0.88; text-transform: uppercase; }
   .hero-title .word-dark { color: #888; }
   .hero-title .word-half { color: #fff; }
-  .hero-sub { display: flex; justify-content: space-between; margin-top: 2rem; padding-top: 1.5rem; border-top: 0.5px solid #222; }
-  .hero-sub-left, .hero-sub-right { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #888; line-height: 1.6; }
+  .hero-sub { display: flex; justify-content: center; margin-top: 2rem; padding-top: 1.5rem; border-top: 0.5px solid #222; }
+  .hero-sub-left, .hero-sub-right { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #888; line-height: 1.6; text-align: center; }
   .hero-video { width: 100%; aspect-ratio: 16/9; overflow: hidden; background: #111; }
   .hero-video video { width: 100%; height: 100%; object-fit: cover; display: block; }
   .statement { padding: 6rem 2rem; max-width: 900px; }
   .statement p { font-size: clamp(22px, 3vw, 36px); font-weight: 400; line-height: 1.4; color: #fff; }
   .statement p span { color: #666; }
-  .stats-row { display: flex; border-top: 0.5px solid #222; border-bottom: 0.5px solid #222; margin: 0 2rem; }
-  .stat-item { flex: 1; padding: 2rem; border-right: 0.5px solid #222; }
-  .stat-item:last-child { border-right: none; }
-  .stat-item .num { font-size: 48px; font-weight: 700; letter-spacing: -0.03em; color: #fff; display: block; }
-  .stat-item .label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #888; margin-top: 0.25rem; display: block; }
-  .stat-item .sub { font-size: 11px; color: #555; margin-top: 0.15rem; display: block; }
   .section-header { display: flex; justify-content: space-between; align-items: baseline; padding: 4rem 2rem 1.5rem; border-top: 0.5px solid #222; margin-top: 4rem; }
   .section-header h2 { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #777; }
   .credits-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: #111; }
@@ -74,21 +68,16 @@
     .nav-center { display: none; }
     .hero { padding: 6rem 1.25rem 3rem; }
     .hero-sub { flex-direction: column; gap: 1rem; }
-    .stats-row { flex-direction: column; margin: 0 1.25rem; }
-    .stat-item { border-right: none; border-bottom: 0.5px solid #222; }
-    .stat-item:last-child { border-bottom: none; }
     .credits-grid { grid-template-columns: 1fr; }
     .approach-grid { grid-template-columns: 1fr; gap: 2rem; }
     .pillars { grid-template-columns: 1fr; }
     .approach, .pipeline, footer, .section-header { padding-left: 1.25rem; padding-right: 1.25rem; }
     .footer-bottom { flex-direction: column; }
-    .stat-item .num { font-size: 36px; }
     .credit-item.has-video { min-height: 200px; }
   }
 </style>
 </head>
 <body>
-
 <nav>
   <div class="nav-left">
     <a href="#credits">Work</a>
@@ -97,61 +86,25 @@
   <div class="nav-center">DarkHalf</div>
   <div class="nav-right"><a href="mailto:info@darkhalf.com">Let's talk</a></div>
 </nav>
-
 <div class="hero">
   <div class="hero-title"><span class="word-dark">Dark</span><span class="word-half">Half</span></div>
   <div class="hero-sub">
-    <div class="hero-sub-left">AI VFX Studio<br>Based in Toronto</div>
-    <div class="hero-sub-right">North America's most produced<br>AI VFX studio</div>
+    <div class="hero-sub-right">AI doesn't make films.<br>Filmmakers do.</div>
   </div>
 </div>
-
 <div class="hero-video">
   <video autoplay muted loop playsinline>
     <source src="JAR4WEB.mov" type="video/mp4">
     <source src="JAR4WEB.mov" type="video/quicktime">
   </video>
 </div>
-
 <div class="statement">
-  <p>Access to frontier AI is equal. The output isn't. <span>DarkHalf brings the direction, the pipeline, and the guarantee — on time, on spec, fully indemnified.</span></p>
+  <p>DarkHalf: frontier AI in the hands of people who've been on set.</p>
 </div>
-
-<div class="stats-row">
-  <div class="stat-item">
-    <span class="num">10+</span>
-    <span class="label">Productions</span>
-    <span class="sub">Series, features &amp; shorts</span>
-  </div>
-  <div class="stat-item">
-    <span class="num">100%</span>
-    <span class="label">Network approved</span>
-    <span class="sub">A&amp;E, History, Amazon, MGM</span>
-  </div>
-  <div class="stat-item">
-    <span class="num">Full</span>
-    <span class="label">Legal indemnification</span>
-    <span class="sub">On all AI-generated content</span>
-  </div>
-</div>
-
 <div class="section-header" id="credits">
   <h2>Selected work</h2>
 </div>
-
 <div class="credits-grid">
-
-  <div class="credit-item has-video">
-    <video autoplay muted loop playsinline>
-      <source src="FISHWEB.mov" type="video/mp4">
-      <source src="FISHWEB.mov" type="video/quicktime">
-    </video>
-    <div class="credit-overlay">
-      <div class="credit-title">Ruth Ellison</div>
-      <div class="credit-type">Feature Film + 2 Short Films — AI VFX</div>
-    </div>
-  </div>
-
   <div class="credit-item has-video">
     <video autoplay muted loop playsinline>
       <source src="JAR4WEB.mov" type="video/mp4">
@@ -162,7 +115,6 @@
       <div class="credit-type">AI-assisted VFX for narrative cinema</div>
     </div>
   </div>
-
   <div class="credit-item has-video">
     <video autoplay muted loop playsinline>
       <source src="KLINGBOAT.mov" type="video/mp4">
@@ -173,7 +125,6 @@
       <div class="credit-type">A&amp;E — Dramatic Reconstruction</div>
     </div>
   </div>
-
   <div class="credit-item has-video">
     <video autoplay muted loop playsinline>
       <source src="PIRATE.mov" type="video/mp4">
@@ -184,7 +135,6 @@
       <div class="credit-type">Dan Aykroyd — History / A&amp;E</div>
     </div>
   </div>
-
   <div class="credit-item has-video">
     <video autoplay muted loop playsinline>
       <source src="SMVR.mov" type="video/mp4">
@@ -195,7 +145,6 @@
       <div class="credit-type">3D Motion Graphics</div>
     </div>
   </div>
-
   <div class="credit-item has-video">
     <video autoplay muted loop playsinline>
       <source src="demovIZ.mov" type="video/mp4">
@@ -206,35 +155,28 @@
       <div class="credit-type">Proprietary AR previsualization for AI pipelines</div>
     </div>
   </div>
-
   <div class="credit-item text-only">
     <div class="credit-title">Life After People</div>
     <div class="credit-type">History Channel — TV Series</div>
   </div>
-
   <div class="credit-item text-only">
     <div class="credit-title">History's Greatest Mysteries</div>
     <div class="credit-type">History Channel — TV Series</div>
   </div>
-
   <div class="credit-item text-only">
     <div class="credit-title">Deepwater Mysteries</div>
     <div class="credit-type">TV Series</div>
   </div>
-
   <div class="credit-item text-only">
     <div class="credit-title">The Pond</div>
     <div class="credit-type">Feature Film</div>
   </div>
-
 </div>
-
 <div class="full-video">
   <video autoplay muted loop playsinline>
     <source src="GIRL.mp4" type="video/mp4">
   </video>
 </div>
-
 <div class="approach" id="approach">
   <div class="approach-grid">
     <div class="approach-heading">AI is only as good as how you direct it.</div>
@@ -263,7 +205,6 @@
     </div>
   </div>
 </div>
-
 <div class="pipeline">
   <p class="pipeline-label">Pipeline &amp; tools</p>
   <div class="tags">
@@ -275,13 +216,11 @@
     <span class="tag">Proprietary motion pipelines</span>
   </div>
 </div>
-
 <div class="end-video">
   <video autoplay muted loop playsinline>
     <source src="DH.mp4" type="video/mp4">
   </video>
 </div>
-
 <footer>
   <div class="footer-cta">
     <a href="mailto:info@darkhalf.com">Start a conversation</a>
@@ -294,6 +233,5 @@
     <p>Built on frontier AI. Delivered on broadcast spec.</p>
   </div>
 </footer>
-
 </body>
 </html>
