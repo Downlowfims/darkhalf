@@ -298,3 +298,34 @@
 </script>
 </body>
 </html>
+<script>
+  window.addEventListener('load', function() {
+    const allVideos = document.querySelectorAll('video');
+    
+    // Function to attempt play on all videos
+    const forcePlayAll = () => {
+      allVideos.forEach(video => {
+        video.muted = true;
+        video.play().catch(err => {
+          console.log("Autoplay blocked by Low Power Mode. Waiting for interaction.");
+        });
+      });
+    };
+
+    // 1. Initial attempt
+    forcePlayAll();
+
+    // 2. The "Ghost Tap" - Triggers play on the first touch, scroll, or click
+    const unlock = () => {
+      forcePlayAll();
+      // Remove listeners once unlocked to save performance
+      window.removeEventListener('touchstart', unlock);
+      window.removeEventListener('mousedown', unlock);
+      window.removeEventListener('keydown', unlock);
+    };
+
+    window.addEventListener('touchstart', unlock);
+    window.addEventListener('mousedown', unlock);
+    window.addEventListener('keydown', unlock);
+  });
+</script>
