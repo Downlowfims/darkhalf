@@ -265,11 +265,41 @@
     <a href="https://www.creamproductions.com" target="_blank" class="cream-link">A division of Cream Productions</a>
   </div>
   <div style="font-size: 11px; color: #444; text-transform: uppercase; letter-spacing: 0.1em;">
-    © 2026 DarkHalf. Toronto, Canada. <br>
-    Built on frontier AI. Delivered on broadcast spec.
+    © 2026 DarkHalf. Toronto, Canada.
   </div>
 </footer>
 
 <script>
   window.addEventListener('load', function() {
-    const allVideos = document.querySelectorAll('
+    const allVideos = document.querySelectorAll('video');
+    
+    const forcePlayAll = () => {
+      allVideos.forEach(video => {
+        video.muted = true;
+        video.setAttribute('playsinline', '');
+        const playPromise = video.play();
+        
+        if (playPromise !== undefined) {
+          playPromise.catch(err => {
+            console.log("Autoplay blocked. Waiting for interaction.");
+          });
+        }
+      });
+    };
+
+    forcePlayAll();
+
+    const unlock = () => {
+      forcePlayAll();
+      window.removeEventListener('touchstart', unlock);
+      window.removeEventListener('mousedown', unlock);
+      window.removeEventListener('keydown', unlock);
+    };
+
+    window.addEventListener('touchstart', unlock);
+    window.addEventListener('mousedown', unlock);
+    window.addEventListener('keydown', unlock);
+  });
+</script>
+</body>
+</html>
