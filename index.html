@@ -59,8 +59,9 @@
   .tag { font-size: 11px; border: 0.5px solid #333; padding: 12px 24px; color: #666; text-transform: uppercase; letter-spacing: 0.1em; display: inline-block; }
   .tag-link:hover { color: #fff; border-color: #fff; }
 
-  .end-video { width: 100%; overflow: hidden; background: #000; border-top: 0.5px solid #111; }
-  .end-video video { width: 100%; display: block; object-fit: cover; }
+  /* Final Video set to 1/2 size and centered */
+  .end-video { width: 100%; overflow: hidden; background: #000; border-top: 0.5px solid #111; padding: 4rem 0; }
+  .end-video video { width: 50%; display: block; margin: 0 auto; object-fit: cover; }
 
   footer { padding: 6rem 2rem; border-top: 0.5px solid #222; text-align: center; }
   .footer-cta { margin-bottom: 4rem; }
@@ -71,6 +72,7 @@
   @media (max-width: 800px) { 
     .approach-grid, .pillars { grid-template-columns: 1fr; }
     .hero { padding-top: 8rem; }
+    .end-video video { width: 80%; } /* Slightly larger on mobile for visibility */
   }
 </style>
 </head>
@@ -114,7 +116,6 @@
 
 <div class="credits-grid">
   <div class="credit-item">
-    <!-- Updated video source back to JAR5.mp4 -->
     <video autoplay muted loop playsinline><source src="JAR5.mp4" type="video/mp4"></video>
     <div class="credit-overlay">
       <div class="credit-title">AI-VFX</div>
