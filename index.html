@@ -16,8 +16,21 @@
   .nav-right a { font-size: 13px; letter-spacing: 0.05em; color: #fff; opacity: 0.7; }
   .nav-right a:hover { opacity: 1; }
   
-  .hero { padding: 12rem 2rem 4rem; text-align: center; max-width: 1000px; margin: 0 auto; }
-  .hero-title { font-size: clamp(72px, 16vw, 220px); font-weight: 800; letter-spacing: -0.05em; line-height: 0.88; text-transform: uppercase; margin-bottom: 3rem; }
+  .hero { padding: 12rem 2rem 4rem; text-align: center; max-width: 100%; margin: 0 auto; display: flex; flex-direction: column; align-items: center; }
+  
+  /* Centering adjustment for the title */
+  .hero-title { 
+    width: 100%;
+    font-size: clamp(72px, 16vw, 220px); 
+    font-weight: 800; 
+    letter-spacing: -0.04em; 
+    line-height: 0.88; 
+    text-transform: uppercase; 
+    margin-bottom: 3rem; 
+    display: flex;
+    justify-content: center;
+    gap: 0.02em; /* Subtle space between Dark and Half */
+  }
   .hero-title .word-dark { color: #888; }
   .hero-title .word-half { color: #fff; }
   
@@ -64,7 +77,6 @@
   .end-video { width: 100%; background: #000; border-top: 0.5px solid #111; padding: 2rem 0; display: flex; justify-content: center; align-items: center; }
   .end-video video { width: 50%; max-width: 600px; display: block; height: auto; }
 
-  /* Manifesto section updated with new copy */
   .manifesto-callout { padding: 4rem 2rem; text-align: center; background: #000; }
   .manifesto-text { font-size: 18px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #fff; line-height: 1.4; }
 
@@ -94,7 +106,9 @@
 </nav>
 
 <div class="hero">
-  <div class="hero-title"><span class="word-dark">Dark</span><span class="word-half">Half</span></div>
+  <div class="hero-title">
+    <span class="word-dark">Dark</span><span class="word-half">Half</span>
+  </div>
   <div class="hero-copy-block">
     <div class="hero-tagline">AI doesn't make films. Filmmakers do.</div>
     <div class="hero-description">
