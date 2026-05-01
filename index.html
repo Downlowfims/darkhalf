@@ -270,5 +270,31 @@
   </div>
 </footer>
 
+<script>
+  window.addEventListener('load', function() {
+    var allVideos = document.querySelectorAll('video');
+    allVideos.forEach(function(video) {
+      // Ensure it's muted (required for autoplay)
+      video.muted = true;
+      // Tell browser it's okay to play inline
+      video.setAttribute('playsinline', '');
+      
+      // Try to play
+      var playPromise = video.play();
+      
+      if (playPromise !== undefined) {
+        playPromise.then(_ => {
+          // Automatic playback started!
+        }).catch(error => {
+          // Auto-play was prevented.
+          // We can try to play again if the user clicks anywhere on the page
+          document.addEventListener('click', function() {
+            video.play();
+          }, { once: true });
+        });
+      }
+    });
+  });
+</script>
 </body>
 </html>
