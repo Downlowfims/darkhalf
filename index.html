@@ -44,7 +44,8 @@
 
   .approach { padding: 8rem 2rem; border-top: 0.5px solid #222; }
   .approach-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
-  .approach-intro { font-size: 13px; text-transform: uppercase; letter-spacing: 0.2em; color: #555; margin-bottom: 1rem; display: block; }
+  .approach-content { display: flex; flex-direction: column; }
+  .approach-intro { font-size: 13px; text-transform: uppercase; letter-spacing: 0.2em; color: #555; margin-bottom: 1rem; }
   .approach-heading { font-size: clamp(32px, 5vw, 56px); font-weight: 700; text-transform: uppercase; line-height: 1.1; color: #fff; margin-bottom: 2rem; }
   .approach-body p { font-size: 17px; color: #aaa; margin-bottom: 2rem; line-height: 1.7; }
   .approach-details strong { color: #fff; display: block; margin-bottom: 0.25rem; text-transform: uppercase; font-size: 14px; letter-spacing: 0.05em; }
@@ -62,6 +63,10 @@
 
   .end-video { width: 100%; background: #000; border-top: 0.5px solid #111; padding: 2rem 0; display: flex; justify-content: center; align-items: center; }
   .end-video video { width: 50%; max-width: 600px; display: block; height: auto; }
+
+  /* Manifesto section updated with new copy */
+  .manifesto-callout { padding: 4rem 2rem; text-align: center; background: #000; }
+  .manifesto-text { font-size: 18px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #fff; line-height: 1.4; }
 
   footer { padding: 6rem 2rem; border-top: 0.5px solid #222; text-align: center; }
   .footer-cta { margin-bottom: 4rem; }
@@ -223,6 +228,13 @@
   </video>
 </div>
 
+<div class="manifesto-callout">
+    <p class="manifesto-text">
+        AI that holds up when it’s blown up.<br>
+        We create for film and TV, not feeds.
+    </p>
+</div>
+
 <footer>
   <div class="footer-cta">
     <a href="mailto:info@darkhalf.com">Start a conversation</a>
@@ -232,7 +244,7 @@
   </div>
   <div style="font-size: 11px; color: #444; text-transform: uppercase; letter-spacing: 0.1em;">
     © 2026 DarkHalf. Toronto, Canada. <br>
-    We don’t build for feeds and followers; we build for film and TV.
+    Built on frontier AI. Delivered on broadcast spec.
   </div>
 </footer>
 
