@@ -63,7 +63,7 @@
   .credit-title { font-size: 18px; font-weight: 600; text-transform: uppercase; color: #fff; margin-bottom: 0.25rem; }
   .credit-type { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #777; }
 
-  .approach { padding: 8rem 2rem; border-top: 0.5px solid #222; }
+  .approach { padding: 8rem 2rem 4rem; border-top: 0.5px solid #222; }
   .approach-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
   .approach-content { display: flex; flex-direction: column; }
   .approach-intro { font-size: 13px; text-transform: uppercase; letter-spacing: 0.2em; color: #555; margin-bottom: 1rem; }
@@ -72,7 +72,10 @@
   .approach-details strong { color: #fff; display: block; margin-bottom: 0.25rem; text-transform: uppercase; font-size: 14px; letter-spacing: 0.05em; }
   .approach-details div { margin-bottom: 2rem; color: #888; font-size: 15px; }
 
-  .pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: #111; margin-top: 4rem; }
+  .full-frame-video { width: 100%; aspect-ratio: 16/9; overflow: hidden; background: #000; margin: 4rem 0; border-top: 0.5px solid #222; border-bottom: 0.5px solid #222; }
+  .full-frame-video video { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: #111; }
   .pillar { background: #000; padding: 4rem 2rem; }
   .pillar h3 { font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; margin-bottom: 1rem; }
   .pillar p { font-size: 14px; color: #777; line-height: 1.6; }
@@ -109,7 +112,7 @@
     <a href="#about">About</a>
   </div>
   <div class="nav-right">
-    <a href="mailto:info@darkhalf.com">Let's talk</a>
+    <a href="mailto:info@darkhalf.ai">Let's talk</a>
   </div>
 </nav>
 
@@ -164,17 +167,17 @@
     </div>
   </div>
   <div class="credit-item">
-    <video autoplay muted loop playsinline><source src="SMVR.mp4" type="video/mp4"></video>
+    <video autoplay muted loop playsinline><source src="3dRENDERV001.mp4" type="video/mp4"></video>
     <div class="credit-overlay">
-      <div class="credit-title">AI Rendering</div>
-      <div class="credit-type">3D Motion Graphics</div>
+      <div class="credit-title">AI RENDERING</div>
+      <div class="credit-type">Spatial rendering and relighting</div>
     </div>
   </div>
   <div class="credit-item">
-    <video autoplay muted loop playsinline><source src="demovIZ.mp4" type="video/mp4"></video>
+    <video autoplay muted loop playsinline><source src="VIZV001.mp4" type="video/mp4"></video>
     <div class="credit-overlay">
-      <div class="credit-title">ViZ — AR Previs</div>
-      <div class="credit-type">Proprietary AR previsualization for AI pipelines</div>
+      <div class="credit-title">MOBILE AR PREVIS</div>
+      <div class="credit-type">Proprietary AR previsualization</div>
     </div>
   </div>
   <div class="credit-item">
@@ -210,6 +213,12 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="full-frame-video">
+    <video autoplay muted loop playsinline>
+      <source src="GIRL.mp4" type="video/mp4">
+    </video>
   </div>
 
   <div class="pillars">
@@ -259,7 +268,7 @@
 
 <footer>
   <div class="footer-cta">
-    <a href="mailto:info@darkhalf.com">Start a conversation</a>
+    <a href="mailto:info@darkhalf.ai">Start a conversation</a>
   </div>
   <div style="margin-bottom: 2rem;">
     <a href="https://www.creamproductions.com" target="_blank" class="cream-link">A division of Cream Productions</a>
