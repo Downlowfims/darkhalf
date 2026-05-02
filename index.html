@@ -85,11 +85,11 @@
   .tag { font-size: 11px; border: 0.5px solid #333; padding: 12px 24px; color: #666; text-transform: uppercase; letter-spacing: 0.1em; display: inline-block; }
   .tag-link:hover { color: #fff; border-color: #fff; }
 
-  .end-video { width: 100%; background: #000; border-top: 0.5px solid #111; padding: 2rem 0; display: flex; justify-content: center; align-items: center; }
+  /* Manifesto Section Refined */
+  .manifesto-section { padding: 6rem 2rem; text-align: center; border-top: 0.5px solid #222; }
+  .manifesto-text { font-size: 18px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #fff; }
+  .end-video { width: 100%; display: flex; justify-content: center; align-items: center; padding: 2rem 0; }
   .end-video video { width: 50%; max-width: 600px; display: block; height: auto; }
-
-  .manifesto-callout { padding: 4rem 2rem; text-align: center; background: #000; }
-  .manifesto-text { font-size: 18px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #fff; line-height: 1.4; }
 
   footer { padding: 6rem 2rem; border-top: 0.5px solid #222; text-align: center; }
   .footer-cta { margin-bottom: 4rem; }
@@ -253,17 +253,16 @@
   </div>
 </div>
 
-<div class="end-video">
-  <video autoplay muted loop playsinline>
-    <source src="DH.mp4" type="video/mp4">
-  </video>
-</div>
+<div class="manifesto-section">
+    <p class="manifesto-text">AI that holds up when it’s blown up</p>
+    
+    <div class="end-video">
+      <video autoplay muted loop playsinline>
+        <source src="DH.mp4" type="video/mp4">
+      </video>
+    </div>
 
-<div class="manifesto-callout">
-    <p class="manifesto-text">
-        AI that holds up when it’s blown up<br>
-        We create for film and TV, not feeds
-    </p>
+    <p class="manifesto-text">We create for film and TV, not feeds</p>
 </div>
 
 <footer>
